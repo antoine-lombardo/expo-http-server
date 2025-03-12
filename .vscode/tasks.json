@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "open:ios",
+			"problemMatcher": [],
+			"label": "Open Xcode",
+			"detail": "xed example/ios"
+		},
+		{
+			"type": "npm",
+			"script": "open:android",
+			"problemMatcher": [],
+			"label": "Open Android Studio",
+			"detail": "open -a \"Android Studio\" example/android"
+		},
+		{
+			"type": "npm",
+			"script": "ios",
+			"path": "example",
+			"problemMatcher": [],
+			"label": "Run iOS",
+			"detail": "expo run:ios"
+		},
+		{
+			"type": "npm",
+			"script": "android",
+			"path": "example",
+			"problemMatcher": [],
+			"label": "Run Android",
+			"detail": "expo run:android"
+		}
+	]
+}

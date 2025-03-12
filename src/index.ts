@@ -2,4 +2,4 @@
 // and on native platforms to HttpServerModule.ts
 export { default } from './HttpServerModule';
 export { default as HttpServerView } from './HttpServerView';
-export * from  './HttpServer.types';
+export * from './HttpServer.types';
