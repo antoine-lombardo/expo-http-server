@@ -4,7 +4,7 @@
 ### Add the package to your npm dependencies
 
 ```
-npx expo install @antoine-lombardo/expo-http-server
+npx expo install expo-httpserver
 ```
 
 ### Add the following properties in app.json

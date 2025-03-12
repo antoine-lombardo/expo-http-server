@@ -21,7 +21,7 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
   }
 }
 
-rootProject.name = 'expo-http-server-example'
+rootProject.name = 'expo-httpserver-example'
 
 dependencyResolutionManagement {
   versionCatalogs {

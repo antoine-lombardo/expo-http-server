@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import { HttpHeaders, HttpMethod } from 'expo-http-server';
+import { HttpHeaders, HttpMethod } from 'expo-httpserver';
 import React, { useState } from 'react';
 import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 

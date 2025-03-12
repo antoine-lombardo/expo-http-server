@@ -1,6 +1,6 @@
 {
-  "name": "@antoine-lombardo/expo-http-server",
-  "version": "0.1.0",
+  "name": "expo-httpserver",
+  "version": "0.1.1",
   "description": "Cross-platform HTTP server",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -18,16 +18,16 @@
   "keywords": [
     "react-native",
     "expo",
-    "expo-http-server",
+    "expo-httpserver",
     "HttpServer"
   ],
-  "repository": "https://github.com/antoine-lombardo/expo-http-server",
+  "repository": "https://github.com/antoine-lombardo/expo-httpserver",
   "bugs": {
-    "url": "https://github.com/antoine-lombardo/expo-http-server/issues"
+    "url": "https://github.com/antoine-lombardo/expo-httpserver/issues"
   },
   "author": "Antoine Lombardo <lombardoa@oxoc.net> (antoine-lombardo)",
   "license": "MIT",
-  "homepage": "https://github.com/antoine-lombardo/expo-http-server#readme",
+  "homepage": "https://github.com/antoine-lombardo/expo-httpserver#readme",
   "dependencies": {
     "uri-js": "^4.4.1"
   },

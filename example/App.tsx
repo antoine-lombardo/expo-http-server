@@ -1,4 +1,4 @@
-import { HttpMethod } from 'expo-http-server';
+import { HttpMethod } from 'expo-httpserver';
 import { ScrollView, StyleSheet, View } from 'react-native';
 
 import RequestTest from './components/RequestTest';

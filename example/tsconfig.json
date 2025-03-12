@@ -3,8 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "expo-http-server": ["../src/index"],
-      "expo-http-server/*": ["../src/*"]
+      "expo-httpserver": ["../src/index"],
+      "expo-httpserver/*": ["../src/*"]
     }
   }
 }
