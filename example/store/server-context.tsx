@@ -1,4 +1,4 @@
-import { HttpServer } from 'expo-httpserver';
+import { HttpServer } from '@antoine-lombardo/expo-http-server';
 import { createContext, ReactNode, useState } from 'react';
 
 export const ServerContext = createContext<HttpServer>(HttpServer.getInstance());

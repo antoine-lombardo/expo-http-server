@@ -1,4 +1,9 @@
-import { HttpRequest, HttpResponse, HttpStatus, OnRunningChangeEvent } from 'expo-httpserver';
+import {
+  HttpRequest,
+  HttpResponse,
+  HttpStatus,
+  OnRunningChangeEvent,
+} from '@antoine-lombardo/expo-http-server';
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 

@@ -19,7 +19,7 @@ config.resolver.nodeModulesPaths = [
 ];
 
 config.resolver.extraNodeModules = {
-  'expo-httpserver': '..',
+  '@antoine-lombardo/expo-http-server': '..',
 };
 
 config.watchFolders = [path.resolve(__dirname, '..')];

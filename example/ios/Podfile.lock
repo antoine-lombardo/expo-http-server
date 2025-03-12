@@ -1798,7 +1798,7 @@ SPEC CHECKSUMS:
   glog: 08b301085f15bcbb6ff8632a8ebaf239aae04e6a
   hermes-engine: eb4a80f6bf578536c58a44198ec93a30f6e69218
   HTTPParserC: aea14c3d2d4ac5beb3988781daa36dfa62e0d9ef
-  HttpServer: 9dbc6324f5a4850aa3ca1b836cfbfbe4b1e99d61
+  HttpServer: 43bd12316ee83a4f6920847cce6c720956ec12c5
   RCT-Folly: bf5c0376ffe4dd2cf438dcf86db385df9fdce648
   RCTDeprecation: 7691283dd69fed46f6653d376de6fa83aaad774c
   RCTRequired: eac044a04629288f272ee6706e31f81f3a2b4bfe

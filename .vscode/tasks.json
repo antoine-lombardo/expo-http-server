@@ -25,10 +25,26 @@
 		},
 		{
 			"type": "npm",
+			"script": "ios-no-cache",
+			"path": "example",
+			"problemMatcher": [],
+			"label": "Run iOS (no cache)",
+			"detail": "expo run:ios --no-build-cache"
+		},
+		{
+			"type": "npm",
 			"script": "android",
 			"path": "example",
 			"problemMatcher": [],
 			"label": "Run Android",
+			"detail": "expo run:android"
+		},
+		{
+			"type": "npm",
+			"script": "android-no-cache",
+			"path": "example",
+			"problemMatcher": [],
+			"label": "Run Android (no cache)",
 			"detail": "expo run:android"
 		}
 	]
