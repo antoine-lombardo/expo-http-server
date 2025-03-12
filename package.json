@@ -1,5 +1,5 @@
 {
-  "name": "expo-http-server",
+  "name": "@antoine-lombardo/expo-http-server",
   "version": "0.1.0",
   "description": "Cross-platform HTTP server",
   "main": "build/index.js",

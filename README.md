@@ -4,7 +4,7 @@
 ### Add the package to your npm dependencies
 
 ```
-npx expo install antoine-lombardo/expo-http-server
+npx expo install @antoine-lombardo/expo-http-server
 ```
 
 # Installation in bare React Native projects
