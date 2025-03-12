@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "HttpServerModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "net.oxoc.expo.modules.httpserver.HttpServerModule"
+    ]
+  }
+}
