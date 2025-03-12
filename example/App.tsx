@@ -1,73 +1,47 @@
-import { useEvent } from 'expo';
-import HttpServer, { HttpServerView } from 'expo-http-server';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { HttpMethod } from 'expo-http-server';
+import { ScrollView, StyleSheet, View } from 'react-native';
+
+import RequestTest from './components/RequestTest';
+import ServerMonitor from './components/ServerMonitor';
+import ServerContextProvider from './store/server-context';
 
 export default function App() {
-  const onChangePayload = useEvent(HttpServer, 'onChange');
-
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.container}>
-        <Text style={styles.header}>Module API Example</Text>
-        <Group name="Constants">
-          <Text>{HttpServer.PI}</Text>
-        </Group>
-        <Group name="Functions">
-          <Text>{HttpServer.hello()}</Text>
-        </Group>
-        <Group name="Async functions">
-          <Button
-            title="Set value"
-            onPress={async () => {
-              await HttpServer.setValueAsync('Hello from JS!');
+    <ServerContextProvider>
+      <ScrollView>
+        <View style={styles.root}>
+          <ServerMonitor />
+          <RequestTest method={HttpMethod.GET} path="/hello" />
+          <RequestTest
+            method={HttpMethod.GET}
+            path="/request-headers"
+            headers={{
+              'Custom-Header-1': 'Custom-Value-1',
+              'Custom-Header-2': 'Custom-Value-2',
             }}
           />
-        </Group>
-        <Group name="Events">
-          <Text>{onChangePayload?.value}</Text>
-        </Group>
-        <Group name="Views">
-          <HttpServerView
-            url="https://www.example.com"
-            onLoad={({ nativeEvent: { url } }) => console.log(`Loaded: ${url}`)}
-            style={styles.view}
+          <RequestTest method={HttpMethod.GET} path="/response-headers" />
+          <RequestTest method={HttpMethod.GET} path="/error-500" />
+          <RequestTest method={HttpMethod.GET} path="/error-400" />
+          <RequestTest method={HttpMethod.GET} path="/throw" />
+          <RequestTest method={HttpMethod.GET} path="/invalid-route" />
+          <RequestTest method={HttpMethod.POST} path="/post-text" body="This is my text." />
+          <RequestTest
+            method={HttpMethod.PATCH}
+            path="/patch-json"
+            body={JSON.stringify({ 'This is': 'my object.' })}
           />
-        </Group>
+        </View>
       </ScrollView>
-    </SafeAreaView>
+    </ServerContextProvider>
   );
 }
 
-function Group(props: { name: string; children: React.ReactNode }) {
-  return (
-    <View style={styles.group}>
-      <Text style={styles.groupHeader}>{props.name}</Text>
-      {props.children}
-    </View>
-  );
-}
-
-const styles = {
-  header: {
-    fontSize: 30,
-    margin: 20,
-  },
-  groupHeader: {
-    fontSize: 20,
-    marginBottom: 20,
-  },
-  group: {
-    margin: 20,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 20,
-  },
-  container: {
+const styles = StyleSheet.create({
+  root: {
     flex: 1,
-    backgroundColor: '#eee',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 70,
   },
-  view: {
-    flex: 1,
-    height: 200,
-  },
-};
+});
