@@ -1,19 +1,22 @@
-import type { StyleProp, ViewStyle } from 'react-native';
+import { HttpRequest } from './HttpRequest';
+import { HttpResponse } from './HttpResponse';
+import { HttpHeaders, HttpMethod } from './native/HttpServerNativeModule.types';
+export { OnRunningChangeEvent } from './native/HttpServerNativeModule.types';
 
-export type OnLoadEventPayload = {
-  url: string;
+export type HttpCallback = (req: HttpRequest, res: HttpResponse) => void;
+
+export type HttpRoute = {
+  method: HttpMethod;
+  pathPattern: string;
+  callback: (req: HttpRequest, res: HttpResponse) => void;
 };
 
-export type HttpServerModuleEvents = {
-  onChange: (params: ChangeEventPayload) => void;
+export type HttpResponseData = {
+  id: string;
+  statusCode: number;
+  statusDescription: string;
+  data: Uint8Array;
+  headers: HttpHeaders;
 };
 
-export type ChangeEventPayload = {
-  value: string;
-};
-
-export type HttpServerViewProps = {
-  url: string;
-  onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
-  style?: StyleProp<ViewStyle>;
-};
+export { HttpHeaders, HttpMethod } from './native/HttpServerNativeModule.types';

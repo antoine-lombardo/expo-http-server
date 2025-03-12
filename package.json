@@ -28,11 +28,13 @@
   "author": "Antoine Lombardo <lombardoa@oxoc.net> (antoine-lombardo)",
   "license": "MIT",
   "homepage": "https://github.com/antoine-lombardo/expo-http-server#readme",
-  "dependencies": {},
+  "dependencies": {
+    "uri-js": "^4.4.1"
+  },
   "devDependencies": {
     "@types/react": "~18.3.12",
-    "expo-module-scripts": "^4.0.3",
     "expo": "~52.0.0",
+    "expo-module-scripts": "^4.0.3",
     "react-native": "0.76.0"
   },
   "peerDependencies": {
